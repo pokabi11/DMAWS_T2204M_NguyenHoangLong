@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DMAWS_T2204M_NguyenHoangLong.Validations;
 
 namespace DMAWS_T2204M_NguyenHoangLong.Models
 {
@@ -13,6 +14,7 @@ namespace DMAWS_T2204M_NguyenHoangLong.Models
         public string EmployeeName { get; set; }
         [Required]
         [DataType(DataType.DateTime)]
+        [EmployeeAgeValidation]
         public DateTime EmployeeDOB { get; set; }
         public string EmployeeDepartment { get; set; }
         public ICollection<ProjectEmployee> ProjectEmployees { get; set; }

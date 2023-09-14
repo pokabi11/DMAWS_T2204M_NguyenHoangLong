@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DMAWS_T2204M_NguyenHoangLong.Validations;
 
 namespace DMAWS_T2204M_NguyenHoangLong.Models
 {
@@ -12,8 +13,9 @@ namespace DMAWS_T2204M_NguyenHoangLong.Models
         [StringLength(150, MinimumLength = 2, ErrorMessage = "Length must be 2 to 150")]
         public string ProjectName { get; set; }
         [Required]
+        [ProjectDateValidation]
         public DateTime ProjectStartDate { get; set; }
-        [Required]
+
         public DateTime? ProjectEndDate { get; set; }
         public ICollection<Employee> ProjectEmployees { get; set; }
         

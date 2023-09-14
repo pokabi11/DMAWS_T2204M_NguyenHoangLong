@@ -2,9 +2,9 @@
 
 namespace DMAWS_T2204M_NguyenHoangLong.Models
 {
-    public class DataContext : DbContext
+    public class Context : DbContext
     {
-		public DataContext(DbContextOptions options): base(options)
+		public Context(DbContextOptions options): base(options)
 		{
 		}
 
